@@ -5,8 +5,9 @@ on:
     - cron: '20 10 * * 3`
 
 jobs:
-  job_id:
+  something:
     name: Test
     runs-on: ubuntu-18.04
-    run: |
-      echo "Weekly Run"
+    steps:
+      - run: |
+          echo "Weekly Run"
