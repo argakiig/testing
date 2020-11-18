@@ -29,4 +29,4 @@ jobs:
         with:
           submodules: "recursive"
           ref: ${{ github.event.inputs.ref }}
-          repository: ${{ github.event.inputs.ref }}
+          repository: ${{ github.event.inputs.repo }}
