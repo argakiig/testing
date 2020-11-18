@@ -1,5 +1,7 @@
 name: Manual workflow
 on:
+  schedule:
+    - cron: '22 10 * * 3'
   workflow_dispatch:
     inputs:
       repo:
