@@ -10,8 +10,8 @@ on:
         default: 'argakiig/raiblocks'
         # Input has to be provided for the workflow to run
         required: true
-      branch:
-        description: 'branch'
+      ref:
+        description: 'reference to pull'
         default: 'develop'
         required: true
 
@@ -24,6 +24,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-    - name: Checkout 
-      run: echo "Hello ${{ github.event.inputs.repo }}:${{ github.event.inputs.branch }}"
+      - name: Checkout
+        uses: actions/checkout@5a4ac90
+        with:
+          submodules: "recursive"
+          ref: ${{ github.event.inputs.ref }}
+          repository: ${{ github.event.inputs.ref }}
