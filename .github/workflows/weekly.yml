@@ -1,0 +1,12 @@
+name: Weekly
+
+on:
+  schedule:
+    - cron: '20 10 * * 3`
+
+jobs:
+  job_id:
+    name: Test
+    runs-on: ubuntu-18.04
+    run: |
+      echo "Weekly Run"
