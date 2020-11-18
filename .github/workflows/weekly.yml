@@ -9,5 +9,6 @@ jobs:
     name: Test
     runs-on: ubuntu-18.04
     steps:
-      - run: |
+      - name: Weekly
+        run: |
           echo "Weekly Run"
